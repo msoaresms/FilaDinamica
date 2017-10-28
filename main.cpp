@@ -74,7 +74,7 @@ public:
     }
 
     void enfileira(T);
-    void desinfileira(T *);
+    void desenfileira(T *);
 };
 
 void Item::mostrar() {
@@ -91,7 +91,7 @@ void Fila<T>::enfileira(T pItem) {
 }
 
 template <typename T>
-void Fila<T>::desinfileira(T *pItem) {
+void Fila<T>::desenfileira(T *pItem) {
     if (!this->vazia()) {
         No<T> *aux = this->frente;
         this->frente = this->frente->getProx();
@@ -115,11 +115,11 @@ int main() {
     f.enfileira(c);
     f.enfileira(d);
 
-    f.desinfileira(&x);
-    f.desinfileira(&x);
-    f.desinfileira(&x);
-    f.desinfileira(&x);
-    f.desinfileira(&x);
+    f.desenfileira(&x);
+    f.desenfileira(&x);
+    f.desenfileira(&x);
+    f.desenfileira(&x);
+    f.desenfileira(&x);
 
 
     return 0;
